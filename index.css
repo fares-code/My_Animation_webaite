@@ -1,0 +1,96 @@
+*{margin: 0;
+padding: 0;
+}
+body{
+   background: linear-gradient(rgb(1,1,46) ,  rgb(36,0,25));
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   height: 100vh; 
+}
+section{background-image: url(stars1.png);
+height: inherit;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+ ul li {
+   
+    list-style: none;
+    margin: 15px 0;
+   
+}
+a{text-decoration: none;
+color: white;
+font-size: 20px;
+font-weight: 500px;
+letter-spacing: 4px;
+background-color: darkblue;
+ border-radius: 30px;
+ padding:6px 15px;
+ display: inline-block;
+ width: 100px;
+text-transform: uppercase;
+transition: 0.4s;
+
+}
+ul:hover li a{
+    background-color: red;
+   opacity: 0;
+}
+ul {
+    text-align: center;
+}
+ul li a:hover{
+transform: scale(1.5);
+background-color: darkmagenta;
+opacity: 1;
+}
+ul li::after{
+    content: attr(data-text);
+    color: white;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   text-transform:uppercase;
+   font-weight: 900px;
+   font-size: 200px;
+   opacity:0 ;
+   transition: 0.7s;
+   pointer-events: none;
+   letter-spacing: 30px;
+   z-index: -3;
+}
+ul li:hover:after{
+    opacity: 0.5;
+   
+letter-spacing: normal;
+}
+ul li::before{
+    content: '';
+width: 80px;
+height: 80px;
+border-radius: 50%;
+background-color: yellow;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(200%,-50%);
+transition: 0.8s;
+pointer-events: none;
+opacity: 0;
+}
+h1{
+    text-align: center;
+    color: blue;
+    
+    font-size: 30px;
+}
+ul li:hover:before{
+opacity: 0.5;
+position: relative;
+z-index: 0;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
